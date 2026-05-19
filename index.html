@@ -3,9 +3,351 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet"/>
     <title>Tarea de MongoDB</title>
 </head>
 <body>
+    <header class="bg-primary text-white text-center fs-1 p-2">MongoDB</header>
     
+    <section class="bases">
+        <div class="d-flex justify-content-center align-items-center">
+            <h2>NoSQL</h2>
+            </div>
+
+        <div class="d-flex flex-column flex-md-row">
+                <div>
+                    <h2 class="">¿Qué son las bases de datos no relacionales?</h1>
+                        <p>Las bases de datos no relacionales, también llamadas NoSQL, son sistemas de almacenamiento de información que no utilizan tablas tradicionales como las bases de datos relacionales.
+
+                        En lugar de trabajar con filas y columnas, almacenan la información en formatos más flexibles, como:</p>
+                        <ul>
+                            <li>Documentos.</li>
+                            <li>Clave-valor.</li>
+                            <li>Grafos.</li>
+                            <li>Columnas.</li>
+                        
+                        </ul>
+
+                        <h3>Características principales</h3>
+
+                        <ul>
+                            <li>Flexibilidad en la estructura de datos.</li>
+                            <li>Alta escalabilidad.</li>
+                            <li>Buen rendimiento con grandes volúmenes de información.</li>
+                            <li>Adecuadas para aplicaciones web modernas y Big Data.</li>
+                        </ul>
+                        <h3>Diferencias entre bases de datos relacionales y no relacionales</h3>
+                        <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Relacionales</th>
+                                        <th>No Relacionales</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Usan tablas</td>
+                                        <td>Usan documentos u otros formatos</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Estructura fija</td>
+                                        <td>Estructura flexible</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SQL</td>
+                                        <td>NoSQL</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Relaciones complejas</td>
+                                        <td>Relaciones más simples</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ejemplo: MySQL</td>
+                                        <td>Ejemplo: MongoDB</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                </div>
+                <div class="col-12 col-md-6">
+                    <h2>Tipos de bases de datos NoSQL</h2>
+                    
+                        <h3>Bases de datos orientadas a documentos</h3>
+
+                        <p>Guardan información en documentos JSON o similares.
+                        Ejemplo: MongoDB</p>
+
+                        <h3>Bases de datos clave-valor</h3>
+
+                        <p>Almacenan pares clave → valor.
+                        Ejemplo: Redis</p>
+
+                        <h3>Bases de datos orientadas a grafos</h3>
+
+                        <p>Representan relaciones entre datos.
+                        Ejemplo: Neo4j</p>
+
+                        <h3>Bases de datos por columnas</h3>
+
+                        <p>Organizan la información por columnas en lugar de filas.
+                        Ejemplo: Apache Cassandra</p>
+
+                    <h3>Ventajas</h3>
+                    <ul>
+                    <li>Mayor velocidad en ciertos procesos.</li>
+                    <li>Escalabilidad horizontal.</li>
+                    <li>Flexibilidad para manejar datos no estructurados.</li>
+                    <li>Muy usadas en aplicaciones modernas.</li>
+                    </ul>
+                    <h3>Desventajas</h3>
+                    <ul>
+                    <li>Menor estandarización.</li>
+                    <li>Algunas no soportan relaciones complejas.</li>
+                    <li>Menor uso de transacciones avanzadas comparado con SQL.</li>
+                    </ul>
+                </div>
+                
+            </div>
+
+
+
+    </section>
+
+<section class="MongoDB">
+        <div class="d-flex justify-content-center align-items-center">
+            <h2>MongoDB</h2>
+            </div>
+
+         <div class="d-flex flex-column flex-md-row">
+                <div>
+                    <h2 class="">¿Qué es MongoDB?</h1>
+                        <p>MongoDB es una base de datos NoSQL orientada a documentos.
+                        Fue desarrollada por MongoDB y almacena la información en documentos tipo JSON llamados BSON.</p>
+
+                        <h3>Características de MongoDB</h3>
+
+                        <p>Modelo orientado a documentos
+                        <br>
+                        Los datos se almacenan en documentos similares a JSON.</p>
+                        <h3>Ejemplo</h3>
+                            <div class="container consola-js">
+                    <pre class="m-0 p-0"><code class="language-js">
+{
+  "nombre": "Juan",
+  "edad": 25,
+  "ciudad": "Bogotá"
+}
+                </code></pre>
+                    </div>
+
+                    <h3>Esquema flexible</h3>
+
+                    <p>No es obligatorio que todos los documentos tengan los mismos campos.</p>
+
+                    <h3>Escalabilidad</h3>
+
+                    <p>MongoDB puede manejar grandes cantidades de datos distribuidos en múltiples servidores.</p>
+
+                    <h3>Alto rendimiento</h3>
+
+                    <p>Permite consultas rápidas y eficientes.</p>
+                        
+
+                <h3>Compatibilidad con múltiples lenguajes</h3>
+
+                    <p class="fw-bold">Puede usarse con:</p>
+                <ul>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>PHP</li>
+                    <li>Node.js</li>
+                    
+                </ul>   
+                </div>
+                <div class="col-12 col-md-6">
+                    <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>MongoDB</th>
+                            <th>Relacional</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Database</td>
+                            <td>Base de datos</td>
+                        </tr>
+
+                        <tr>
+                            <td>Collection</td>
+                            <td>Tabla</td>
+                        </tr>
+
+                        <tr>
+                            <td>Document</td>
+                            <td>Registro/Fila</td>
+                        </tr>
+
+                        <tr>
+                            <td>Field</td>
+                            <td>Columna</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Usos de MongoDB</h3>
+                <ul>
+                <li>Aplicaciones web</li>.
+                <li>Redes sociales.</li>
+                <li>Sistemas de análisis de datos.</li>
+                <li>Aplicaciones en tiempo real.</li>
+                <li>E-commerce.</li>
+                </ul>
+                <h3>Ventajas de MongoDB</h3>
+                <ul>
+                <li>Fácil manejo de datos JSON.</li>
+                <li>Flexible y escalable.</li>
+                <li>Buena integración con JavaScript y Node.js.</li>
+                <li>Ideal para aplicaciones modernas.</li>
+                </ul>
+                <h3>Desventajas</h3>
+                <ul>
+                <li>Puede consumir más memoria.</li>
+                <li>Relaciones complejas menos eficientes que SQL.</li>
+                <li>Algunas operaciones avanzadas son más difíciles.</li>
+                </ul>
+
+                </div>
+                
+            </div>
+        
+</section>
+
+
+<section class="Mongoose">
+        <div class="d-flex justify-content-center align-items-center">
+            <h2>Mongoose</h2>
+            </div>
+
+         <div class="d-flex flex-column flex-md-row">
+                <div>
+                    <h2 class="">¿Qué es Mongoose?</h1>
+                        <p>Mongoose es una librería para Node.js que facilita trabajar con MongoDB.
+
+                        Mongoose funciona como un ODM (Object Data Modeling), permitiendo modelar los datos mediante esquemas y clases.</p>
+                        <h3>¿Para qué sirve?</h3>
+                        <ul>
+                        <li>Conectar aplicaciones Node.js con MongoDB.</li>
+                        <li>Crear esquemas.</li>
+                        <li>Validar datos.</li>
+                        <li>Facilitar consultas a la base de datos.</li>
+                        </ul>
+
+                        <h3>Funcionamiento básico</h3>
+                        <h4>Instalar Mongoose</h4>
+                            <div class="container consola-js">
+                    <pre class="m-0 p-0"><code class="language-bash">
+npm install mongoose
+                </code></pre></div>
+
+                    <h4>Conexión a MongoDB</h4>
+                            <div class="container consola-js">
+                    <pre class="m-0 p-0"><code class="language-js">
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost:27017/mibasedatos')
+.then(() => console.log('Conectado'))
+.catch(err => console.log(err));
+                </code></pre></div>
+
+                    <h4>Crear un esquema</h4>
+                            <div class="container consola-js">
+                    <pre class="m-0 p-0"><code class="language-js">
+const usuarioSchema = new mongoose.Schema({
+  nombre: String,
+  edad: Number
+});
+                </code></pre></div>
+
+                    <h4>Crear un modelo</h4>
+                            <div class="container consola-js">
+                    <pre class="m-0 p-0"><code class="language-js">
+const Usuario = mongoose.model('Usuario', usuarioSchema);
+                </code></pre></div>
+
+                
+
+                    </div>
+
+                  
+                
+                <div class="col-12 col-md-6">
+                    <table class="table table-bordered">
+                   
+                  <h4>Guardar datos</h4>
+                            <div class="container consola-js">
+                    <pre class="m-0 p-0"><code class="language-js">
+const nuevoUsuario = new Usuario({
+  nombre: 'Juan',
+  edad: 25
+});
+
+nuevoUsuario.save();
+                </code></pre></div>
+
+                <h3>Ventajas de Mongoose</h3>
+                <ul>
+                <li>Validación automática de datos.</li>
+                <li>Organización del código.</li>
+                <li>Manejo sencillo de consultas.</li>
+                <li>Integración completa con Node.js.</li>
+                    </ul>
+                <h3>Diferencia entre MongoDB y Mongoose</h3>
+                    <hr>
+                <table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>MongoDB</th>
+            <th>Mongoose</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Base de datos</td>
+            <td>Librería para Node.js</td>
+        </tr>
+        <tr>
+            <td>Guarda información</td>
+            <td>Facilita interactuar con MongoDB</td>
+        </tr>
+        <tr>
+            <td>Sistema gestor NoSQL</td>
+            <td>ODM</td>
+        </tr>
+    </tbody>
+</table>
+
+
+                </div>
+                
+            </div>
+        
+</section>
+
+
+<footer class="pt-3">
+<ul class="bg-dark text-white py-2 ">
+    <li><a href="https://aws.amazon.com/es/nosql/">Aws amazon NOSQL</a></li>
+    <li><a href="https://www.ibm.com/think/topics/nosql-databases">What is a NoSQL database? IBM</a></li>
+    <li><a href="https://mongoosejs.com/docs/">mongoosejs</a></li>
+</ul>
+
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
 </body>
 </html>
